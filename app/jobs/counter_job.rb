@@ -12,6 +12,7 @@ class CounterJob < ApplicationJob
   # end
 
   def perform(*args)
+    puts "counterjob perform"
     @events = Event.all
     @events.each do |event|
       event.count += 1
